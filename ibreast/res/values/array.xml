@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="tab_item_text">
+        <item>Command one</item>
+        <item>Command two</item>
+        <item>Command three</item>
+        <item>Command four</item>
+        <item>Command four</item>
+    </string-array>
+
+</resources>
