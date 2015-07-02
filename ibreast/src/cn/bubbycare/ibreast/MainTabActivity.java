@@ -1,7 +1,6 @@
 package cn.bubbycare.ibreast;
 
-import com.yangyu.mycustomtab02.R;
-
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTabHost;
@@ -10,9 +9,16 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TabHost.TabSpec;
 import android.widget.TextView;
+import cn.bubbycare.ibreast.activity.MainActivity;
+import cn.bubbycare.ibreast.fragment.FragmentPage1;
+import cn.bubbycare.ibreast.fragment.FragmentPage2;
+import cn.bubbycare.ibreast.fragment.FragmentPage3;
+import cn.bubbycare.ibreast.fragment.FragmentPage4;
+import cn.bubbycare.ibreast.fragment.FragmentPage5;
 
 /**
  * @author yangyu 功能描述：自定义TabHost
+ *youmeng 5594bcfb67e58e4031002ce3
  */
 public class MainTabActivity extends FragmentActivity {
     // 定义FragmentTabHost对象
@@ -24,7 +30,6 @@ public class MainTabActivity extends FragmentActivity {
     // 定义数组来存放按钮图片
     private int mImageViewArray[] = { R.drawable.tab_home_btn, R.drawable.tab_message_btn, R.drawable.tab_selfinfo_btn, R.drawable.tab_square_btn,
             R.drawable.tab_more_btn };
-
     // Tab选项卡的文字
     private String[] mTextviewArray;// = { getString(R.string.frament_first), getString(R.string.frament_second), getString(R.string.frament_thirst), getString(R.string.frament_four), getString(R.string.frament_five) };
 
@@ -33,7 +38,10 @@ public class MainTabActivity extends FragmentActivity {
         setContentView(R.layout.main_tab_layout);
         initValue();
         initView();
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
+    
 
     private void initValue() {
         // TODO Auto-generated method stub
